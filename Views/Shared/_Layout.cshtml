@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Index</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/bundles/css")
+    @Styles.Render("~/bundles/adminLTE")
+   
+
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body class="sidebar-mini  layout-boxed" style="height: auto;">
+    <div class="wrapper">
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <ul class="navbar-nav">
+                <li class="navbar-item">
+                    <a class="nav-link" href="#" data-widget="pushmenu" role="button"><i class="fa fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block nav-link">@Html.ActionLink("Cliente", "Index", "Clientes")</li>
+                <li class="nav-item d-none d-sm-inline-block nav-link">@Html.ActionLink("Acerca de", "About", "Home")</li>
+                <li class="nav-item d-none d-sm-inline-block nav-link">@Html.ActionLink("Contacto", "Contact", "Home")</li>
+            </ul>
+        </nav>
+
+        <aside class="main-sidebar sidebar-dark-primary elevate-4 ">
+
+            <a href="#" class="brand-link">
+                <img src="~/admin-lte/img/user1-128x128.jpg"
+                     alt="Clientes"
+                     class="pull-left img-circle"
+                     style="opacity: .8" />
+                <span class="brand-text font-weight-light">Clientes</span>
+            </a>
+
+            <div class="sidebar">
+                <div class="user-panel mt-3 pb-3 d-flex">
+                    <div class="pull-left image">
+                        <img src="~/admin-lte/img/avatar04.png" class="img-circle" alt="Imagnen del Usuario" />
+                    </div>
+                    <div class="pull-left info">
+                        <a href="#" class="d-block">Teñikaler Smith</a>
+                    </div>
+                </div>
+
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item has-tachometer-alt">
+                            @Html.ActionLink("Cliente", "Index", "Clientes")
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+
+
+
+        <div class="content-wrapper">
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12">
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="main-footer">
+            <div class="float-right d-none d-sm-block">
+                <b>Versión </b>1.0.0
+            </div>
+            <strong>&copy; @DateTime.Now.Year - Mi aplicación Practica de Asp.Net - Todos los derechos reservados</strong>
+        </footer>
+
+        <aside class="control-sidebar control-sidebar-dark">
+            <div class="p-3 control-sidebar-content">
+                <h5>Clientes</h5>
+                <hr class="mb-2" />
+                
+            </div>
+        </aside>
+        <div id="sidebar-overlay"></div>
+    </div>
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

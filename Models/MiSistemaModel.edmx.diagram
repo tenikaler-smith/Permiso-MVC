@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="56ce5bde12364f839cd94776fa7b2c39" Name="Diagram1">
+        <EntityTypeShape EntityType="MiSistemaModel.modulo" Width="1.5" PointX="1.5" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiSistemaModel.operaciones" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiSistemaModel.rol" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiSistemaModel.rol_operacion" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiSistemaModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MiSistemaModel.usuario" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
+        <AssociationConnector Association="MiSistemaModel.FK_operaciones_modulo" ManuallyRouted="false" />
+        <AssociationConnector Association="MiSistemaModel.FK_rol_operacion_operaciones" ManuallyRouted="false" />
+        <AssociationConnector Association="MiSistemaModel.FK_rol_operacion_rol" ManuallyRouted="false" />
+        <AssociationConnector Association="MiSistemaModel.FK_usuario_rol" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MiSistemaModel.CatCorregimientos" Width="1.5" PointX="9.875" PointY="1" />
+        <EntityTypeShape EntityType="MiSistemaModel.CatDistritos" Width="1.5" PointX="7.625" PointY="0.875" />
+        <EntityTypeShape EntityType="MiSistemaModel.CatProvincia" Width="1.5" PointX="5.375" PointY="1.125" />
+        <EntityTypeShape EntityType="MiSistemaModel.Cliente" Width="1.5" PointX="5.375" PointY="3.75" />
+        <AssociationConnector Association="MiSistemaModel.FK_CatCorregimientosCatDistritos" />
+        <AssociationConnector Association="MiSistemaModel.FK_CatDistritosCatProvincia" />
+        <AssociationConnector Association="MiSistemaModel.FK_ClienteCatCorregimientos" />
+        <AssociationConnector Association="MiSistemaModel.FK_ClienteCatDistrito" />
+        <AssociationConnector Association="MiSistemaModel.FK_ClienteCatProvincia" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

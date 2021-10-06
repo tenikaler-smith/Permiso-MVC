@@ -1,0 +1,111 @@
+﻿@model IEnumerable<PersimosMVC.Models.Cliente>
+
+@{
+    ViewBag.Title = "Cliente";
+}
+<p>
+    @Html.ActionLink("Crear", "Create", null, new { @class = "btn btn-success" })
+</p>
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Clientes</h3>
+
+        <div class="card-tools">
+            <div class="input-group input-group-sm" style="width: 150px;">
+                <input type="text" name="table_search" class="form-control float-right" placeholder="Buscar">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-body table-responsive p-0">
+        <table class="table table-hover text-nowrap">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Apellido)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Sexo)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdDirrecion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdProvincia)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdDistrito)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdCorregimiento)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Apellido)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sexo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdDirrecion)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdProvincia)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdDistrito)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdCorregimiento)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = item.IdCliente, @class = "btn btn-primary " })
+                        @Html.ActionLink("Mostrar", "Details", new { id = item.IdCliente, @class = "btn btn-default " })
+                        @Html.ActionLink("Eliminar", "Delete", new { id = item.IdCliente, @class = "btn btn-warning " })
+                    </td>
+                </tr>
+            }
+
+
+        </table>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button id="prueba" type="submit">Prueba</button>
+
+@section scripts{
+    @Scripts.Render("~/bundles/funciones")
+}
+

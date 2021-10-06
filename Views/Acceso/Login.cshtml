@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Iniciar Sessión";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
+
+    <div class="login-page">
+
+        <div class="login-box">
+            <div class="login-logo">
+                <h2>Inicio de Sessión</h2>
+            </div>
+
+            <div class="card">
+                <div class="card-body login-box-body">
+
+                    <form action="@Url.Content("~/Acceso/Login")" method="post">
+
+                        <div class="input-group mb-4">
+                            <label class="col-sm-1">Usuario</label>
+                            <input type="email" name="User" class="form-control">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fa fa-envelope"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group mb-4">
+                            <label class="col-sm-1">Contraseña</label>
+                            <input type="password" name="Pass" class="form-control">
+                            <div class="input-group-append">
+                                <div class="input-group-text">
+                                    <span class="fa fa-lock"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <button type="submit" class="btn btn-success btn-block">Iniciar Sessión</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <p class="login-box-msg alert alert-warning">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                            &times;
+                        </button>
+                        @ViewBag.Error
+                    </p>
+                </div>
+
+
+
+                
+
+
+
+            </div>
+        </div>
+    </div>
